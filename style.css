@@ -157,7 +157,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  background-color: #ffffff; /* White section background */
+  background-color: #232f3e15; /* Amazon dark blue with 15% opacity section background */
 }
 
 .section-container {
