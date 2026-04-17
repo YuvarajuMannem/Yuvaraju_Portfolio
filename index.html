@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Mannem Yuvaraju - Software Developer Portfolio showcasing web development projects and skills" />
+    <meta name="author" content="Mannem Yuvaraju" />
+    <meta name="keywords" content="Software Developer, Web Development, React, Node.js, Portfolio" />
+    <title>Mannem Yuvaraju | Software Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/profile-pic.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
+    <nav id="desktop-nav" aria-label="Desktop Navigation">
       <div class="logo">Mannem Yuvaraju</div>
       <div>
         <ul class="nav-links">
@@ -20,59 +24,67 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
+    
+    <nav id="hamburger-nav" aria-label="Mobile Navigation">
       <div class="logo">Mannem Yuvaraju</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Menu" role="button" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
-    <br>
+    
+    <br />
+    
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Yuvaraju profile picture" class="about-pic"/>
+        <img src="./assets/profile-pic.png" alt="Mannem Yuvaraju profile picture" class="about-pic" loading="eager" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Mannem Yuvaraju</h1>
         <p class="section__text__p2">Software Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-1"
-            onclick="window.open('./assets/Yuvaraju_Resume.pdf')"
-          >
+          <button class="btn btn-color-1" onclick="window.open('./assets/Yuvaraju_Resume.pdf')" aria-label="Download CV">
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button class="btn btn-color-1" onclick="location.href='./#contact'" aria-label="Contact Information">
             Contact Info
           </button>
         </div>
         <div id="socials-container">
           <img
             src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
+            alt="LinkedIn profile"
             class="icon"
             onclick="location.href='https://www.linkedin.com/in/mannem-yuvaraju/'"
+            role="button"
+            tabindex="0"
+            aria-label="Visit LinkedIn profile"
           />
           <img
             src="./assets/github.png"
-            alt="My Github profile"
+            alt="GitHub profile"
             class="icon"
             onclick="location.href='https://github.com/YuvarajuMannem'"
+            role="button"
+            tabindex="0"
+            aria-label="Visit GitHub profile"
           />
         </div>
       </div>
     </section>
-    <br>
+    
+    <br />
+    
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -80,8 +92,9 @@
         <div class="section__pic-container">
           <img
             src="./assets/about-pic.png"
-            alt="Profile picture"
+            alt="Mannem Yuvaraju about picture"
             class="about-pic"
+            loading="lazy"
           />
         </div>
         <div class="about-details-container">
@@ -91,6 +104,7 @@
                 src="./assets/skills.png"
                 alt="Skills icon"
                 class="icon"
+                loading="lazy"
               />
               <h3>Experience</h3>
               <p>Fresher<br />Frontend Development</p>
@@ -100,6 +114,7 @@
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
+                loading="lazy"
               />
               <h3>Education</h3>
               <p>Computer Science and Engineering with AIML specialization</p>
@@ -108,22 +123,27 @@
           <div class="text-container">
             <p>
               I am looking for a Web developer role where I can leverage my expertise in JavaScript,
-               Node.js, React.js and databases like MongoDB and SQL. I am particularly interested in
-                opportunities that allow me to work on scalable and real-time applications. I thrive in
-                 environments that encourage learning and innovation, and I’m eager to contribute to a 
-                 dynamic team while continuing to expand my technical skills.
+              Node.js, React.js and databases like MongoDB and SQL. I am particularly interested in
+              opportunities that allow me to work on scalable and real-time applications. I thrive in
+              environments that encourage learning and innovation, and I'm eager to contribute to a 
+              dynamic team while continuing to expand my technical skills.
             </p>
           </div>
         </div>
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Arrow icon navigating to skills section"
         class="icon arrow"
         onclick="location.href='./#skills'"
+        role="button"
+        tabindex="0"
+        aria-label="Navigate to skills section"
       />
     </section>
-    <br>
+    
+    <br />
+    
     <section id="skills">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
@@ -133,119 +153,78 @@
             <h2 class="skills-sub-title">Web Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
-                  <h3>Html</h3>
+                  <h3>HTML</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>CSS</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>JavaScript</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>MongoDB</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>React.js</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>Node.js</h3>
                   <p>Advanced</p>
                 </div>
               </article>
-              
             </div>
           </div>
           <div class="details-container">
             <h2 class="skills-sub-title">Other Skills</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>Java</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
-                  <h3>My SQL</h3>
+                  <h3>MySQL</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
                   <h3>Git</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Checkmark icon" class="icon" loading="lazy" />
                 <div>
-                  <h3>Github</h3>
-                  <p>Basic</p>
+                  <h3>GitHub</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
             </div>
@@ -254,12 +233,17 @@
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Arrow icon navigating to projects section"
         class="icon arrow"
         onclick="location.href='./#projects'"
+        role="button"
+        tabindex="0"
+        aria-label="Navigate to projects section"
       />
     </section>
-    <br>
+    
+    <br />
+    
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -269,111 +253,97 @@
             <div class="article-container">
               <img
                 src="./assets/project-1.png"
-                alt="Project 1"
+                alt="Weather App project screenshot"
                 class="project-img"
+                loading="lazy"
               />
             </div>
             <h2 class="skills-sub-title project-title">Weather App</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" aria-label="Weather App GitHub repository">
+                GitHub
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'" aria-label="Weather App live demo">
                 Live Demo
               </button>
             </div>
           </div>
+          
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/project-2.png"
-                alt="Project 2"
+                alt="Yuv Personal Chatbot project screenshot"
                 class="project-img"
+                loading="lazy"
               />
             </div>
             <h2 class="skills-sub-title project-title">Yuv Personal Chatbot</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/YuvarajuMannem/Yuv---Personal-Assistant-bot'"
-              >
-                Github
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/YuvarajuMannem/Yuv---Personal-Assistant-bot'" aria-label="Chatbot GitHub repository">
+                GitHub
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://yuv-personal-assistant-bot.vercel.app/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://yuv-personal-assistant-bot.vercel.app/'" aria-label="Chatbot live demo">
                 Live Demo
               </button>
             </div>
           </div>
+          
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/project-3.png"
-                alt="Project 3"
+                alt="My Book Verse project screenshot"
                 class="project-img"
+                loading="lazy"
               />
             </div>
-            <h2 class="skills-sub-title project-title">MY Book Verse</h2>
+            <h2 class="skills-sub-title project-title">My Book Verse</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/YuvarajuMannem/my-book-verse'"
-              >
-                Github
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/YuvarajuMannem/my-book-verse'" aria-label="Book Verse GitHub repository">
+                GitHub
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://my-book-verse.vercel.app/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://my-book-verse.vercel.app/'" aria-label="Book Verse live demo">
                 Live Demo
               </button>
+            </div>
+          </div>
           
-          </div>
-          </div>
-          </div>
-            <div class="details-container color-container">
+          <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/project-4.png"
-                alt="Project 4"
+                alt="My Habit Tracker project screenshot"
                 class="project-img"
+                loading="lazy"
               />
             </div>
-            <h2 class="skills-sub-title project-title">MY Habit Tracker</h2>
+            <h2 class="skills-sub-title project-title">My Habit Tracker</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/YuvarajuMannem/MY-Habit-Heatmap-Tracker.git'"
-              >
-                Github
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/YuvarajuMannem/MY-Habit-Heatmap-Tracker.git'" aria-label="Habit Tracker GitHub repository">
+                GitHub
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://my-habit-heatmap-tracker.vercel.app/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://my-habit-heatmap-tracker.vercel.app/'" aria-label="Habit Tracker live demo">
                 Live Demo
               </button>
             </div>
-            </div>
+          </div>
         </div>
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Arrow icon navigating to contact section"
         class="icon arrow"
         onclick="location.href='./#contact'"
+        role="button"
+        tabindex="0"
+        aria-label="Navigate to contact section"
       />
-      <br>
+      <br />
     </section>
-    <br>
+    
+    <br />
+    
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -383,8 +353,9 @@
             src="./assets/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
+            loading="lazy"
           />
-          <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=mannemyuvaraju9503@gmail.com" target="_blank">
+          <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=mannemyuvaraju9503@gmail.com" target="_blank" rel="noopener noreferrer">
               Gmail</a></p>
         </div>
         <div class="contact-info-container">
@@ -392,14 +363,17 @@
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
+            loading="lazy"
           />
-          <p><a href="https://www.linkedin.com/in/mannem-yuvaraju/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/mannem-yuvaraju/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
       </div>
     </section>
-    <br>
+    
+    <br />
+    
     <footer>
-      <nav>
+      <nav aria-label="Footer Navigation">
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -410,7 +384,9 @@
         </div>
       </nav>
       <p>Thanks for exploring my portfolio! Let's connect and collaborate on exciting projects.</p>
+      <p>&copy; 2024 Mannem Yuvaraju. All rights reserved.</p>
     </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
