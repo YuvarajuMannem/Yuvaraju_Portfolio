@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Mannem Yuvaraju - Software Engineer Portfolio" />
+    <meta name="author" content="Mannem Yuvaraju" />
+    <title>Mannem Yuvaraju | Software Engineer</title>
+    
+    <!-- CSS & Fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">
+        <a href="#hero">Yuvaraju<span class="logo-dot">.</span></a>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-cta">
+        <a href="https://drive.google.com/file/d/1sJTt0rZIt_IUapvSD_3iAAFHgixoV7Rw/view?usp=drive_link" target="_blank" class="btn-nav">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+      </div>
+    </nav>
+    
+    <!-- Mobile Hamburger Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">
+        <a href="#hero">Yuvaraju<span class="logo-dot">.</span></a>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Menu" role="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <a href="https://drive.google.com/file/d/1sJTt0rZIt_IUapvSD_3iAAFHgixoV7Rw/view?usp=drive_link" target="_blank" class="menu-btn">
+              Download Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="screen-fit">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Yuvaraju Mannem</span>
+          </h1>
+          <p class="hero-role-lead">
+            Software Engineer
+          </p>
+
+          <!-- 3 Separate Executive Story Blocks -->
+          <div class="hero-story-blocks">
+            <!-- Block 1: Academic Foundation & VIT-AP Logo -->
+            <div class="story-block">
+              <div class="story-block-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/VIT_AP_University_logo.png" alt="VIT-AP Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="story-logo-fallback" style="display:none;"><i class="fa-solid fa-graduation-cap"></i></div>
+              </div>
+              <div class="story-block-text">
+                <p>
+                  I’m a <strong>Computer Science Graduate from VIT-AP University (8.68 CGPA)</strong>. During my college, I developed a strong foundation in core computer science subjects such as <strong>Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, and Computer Networks</strong>. In terms of programming, I primarily work with <strong>Java</strong> and also have experience with <strong>Python</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Block 2: Industry Internship & Ninternet Logo -->
+            <div class="story-block">
+              <div class="story-block-logo">
+                <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFC4QhpvC-aQw/company-logo_100_100/company-logo_100_100/0/1716310671989?e=1789603200&v=beta&t=U2cY7Eft7Lg8gu83k-a_18ijDkzUbSzjfj8-KobG2rQ" alt="Ninternet Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="story-logo-fallback" style="display:none;"><i class="fa-solid fa-building"></i></div>
+              </div>
+              <div class="story-block-text">
+                <p>
+                  Recently, I completed a backend internship at <strong>Ninternet</strong>, where I worked on production APIs and infrastructure—reducing OTP response times, engineering real-time event streaming using <strong>Redis Pub/Sub & SSE</strong>, securing APIs with JWT, and managing Docker-based deployments.
+                </p>
+              </div>
+            </div>
+
+            <!-- Block 3: Target Career Goal & Target Bullseye Logo -->
+            <div class="story-block">
+              <div class="story-block-logo target-block-logo">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="story-block-text">
+                <p>
+                  I am actively seeking <strong>software engineering opportunities</strong> where I can contribute to high-impact products, strengthen backend architecture, and grow with the team.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">
+              View Projects <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="https://drive.google.com/file/d/1sJTt0rZIt_IUapvSD_3iAAFHgixoV7Rw/view?usp=drive_link" target="_blank" class="btn-secondary">
+              Resume <i class="fa-solid fa-up-right-from-square"></i>
+            </a>
+            <a href="#contact" class="btn-outline">
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/mannem-yuvaraju/" target="_blank" class="social-link" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/YuvarajuMannem" target="_blank" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://leetcode.com/u/ap_22bce20040/" target="_blank" class="social-link" title="LeetCode Profile">
+              <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://www.instagram.com/myfriendyuvi/" target="_blank" class="social-link" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:mannemyuvaraju9503@gmail.com" class="social-link" title="Email Me">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="image-frame">
+            <img src="./assets/profile-pic.png" alt="Yuvaraju Mannem Profile" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Projects -->
+    <section id="projects" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Projects</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Recent work & web applications</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="browser-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <img src="./assets/project-3.png" alt="My Book Verse Interface" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+              <h3>My Book Verse</h3>
+              <p>A full-stack digital library and book tracking platform allowing users to discover books, maintain reading lists, and store reviews.</p>
+              
+              <div class="project-action-buttons">
+                <a href="https://my-book-verse.vercel.app/" target="_blank" class="btn-card-primary">
+                  <i class="fa-solid fa-globe"></i> Live
+                </a>
+                <a href="https://github.com/YuvarajuMannem/my-book-verse" target="_blank" class="btn-card-secondary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="browser-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <img src="./assets/project-2.png" alt="Personal Assistant Chatbot Interface" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>Python</span>
+                <span>AI Bot</span>
+                <span>Flask</span>
+                <span>Vercel</span>
+              </div>
+              <h3>Yuv Personal Assistant Bot</h3>
+              <p>AI-powered personal assistant web application designed to handle task automation, queries, and daily productivity workflows.</p>
+              
+              <div class="project-action-buttons">
+                <a href="https://yuv-personal-assistant-bot.vercel.app/" target="_blank" class="btn-card-primary">
+                  <i class="fa-solid fa-globe"></i> Live
+                </a>
+                <a href="https://github.com/YuvarajuMannem/Yuv---Personal-Assistant-bot" target="_blank" class="btn-card-secondary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="browser-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <img src="./assets/project-4.png" alt="Habit Heatmap Tracker Interface" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>React.js</span>
+                <span>Heatmap Grid</span>
+                <span>Node.js</span>
+              </div>
+              <h3>My Habit Heatmap Tracker</h3>
+              <p>Interactive habit tracker utilizing GitHub-style contribution heatmaps to visually measure daily consistency and streak goals.</p>
+              
+              <div class="project-action-buttons">
+                <a href="https://my-habit-heatmap-tracker.vercel.app/" target="_blank" class="btn-card-primary">
+                  <i class="fa-solid fa-globe"></i> Live
+                </a>
+                <a href="https://github.com/YuvarajuMannem/MY-Habit-Heatmap-Tracker.git" target="_blank" class="btn-card-secondary">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="browser-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <img src="./assets/project-1.png" alt="Weather Forecast Application Interface" />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span>JavaScript</span>
+                <span>OpenWeather API</span>
+                <span>Async UI</span>
+              </div>
+              <h3>Weather Forecast App</h3>
+              <p>Real-time weather tracking application providing location-based temperature forecasts and interactive UI indicators.</p>
+              
+              <div class="project-action-buttons">
+                <a href="https://github.com/YuvarajuMannem" target="_blank" class="btn-card-secondary btn-full">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Industry Experience -->
+    <section id="experience" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Experience</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Backend internship at Ninternet</p>
+        </div>
+
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-role-title">
+              <div class="exp-company-logo">
+                <a href="https://in.linkedin.com/company/ninternet-net" target="_blank" title="Ninternet.net LinkedIn">
+                  <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFC4QhpvC-aQw/company-logo_100_100/company-logo_100_100/0/1716310671989?e=1789603200&v=beta&t=U2cY7Eft7Lg8gu83k-a_18ijDkzUbSzjfj8-KobG2rQ" alt="Ninternet.net Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                  <div class="company-logo-fallback" style="display:none;"><i class="fa-solid fa-network-wired"></i></div>
+                </a>
+              </div>
+              <div>
+                <h3>Backend Intern</h3>
+                <a href="https://in.linkedin.com/company/ninternet-net" target="_blank" class="exp-company-link">
+                  <i class="fa-solid fa-building"></i> Ninternet <i class="fa-solid fa-arrow-up-right-from-square exp-link-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="exp-date">
+              <span class="badge-olive"><i class="fa-solid fa-microchip"></i> Internship</span>
+            </div>
+          </div>
+
+          <div class="exp-tech-stack">
+            <span>Java</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>REST APIs</span>
+            <span>Redis Pub/Sub</span>
+            <span>SSE</span>
+            <span>Docker</span>
+            <span>MongoDB</span>
+            <span>MySQL</span>
+            <span>JWT</span>
+          </div>
+
+          <ul class="exp-bullets">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>OTP Flow Response Time Optimization:</strong> Architected and refactored the OTP authentication flow, significantly reducing latency and server response time.
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Real-Time Data Streaming (Redis Pub/Sub & SSE):</strong> Implemented real-time event streaming and push updates using <strong>Redis Pub/Sub</strong> and <strong>Server-Sent Events (SSE)</strong>.
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>API Security & Authentication:</strong> Designed secure RESTful API endpoints with JWT authentication, bcrypt password hashing, and Role-Based Access Control (RBAC).
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Docker Containerization & Deployment:</strong> Managed Docker containers for backend services, ensuring smooth containerized deployment.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Technical Skills -->
+    <section id="skills" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Skills</span>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-subtitle">Technologies & developer tools</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-code"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-pill">Java (Primary)</div>
+              <div class="skill-pill">Python</div>
+              <div class="skill-pill">SQL</div>
+              <div class="skill-pill">Data Structures (DSA)</div>
+              <div class="skill-pill">OOP & DBMS</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-server"></i>
+              <h3>Backend & Systems</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-pill">Node.js</div>
+              <div class="skill-pill">Express.js</div>
+              <div class="skill-pill">RESTful APIs</div>
+              <div class="skill-pill">Redis Pub/Sub</div>
+              <div class="skill-pill">Server-Sent Events (SSE)</div>
+              <div class="skill-pill">Docker Containerization</div>
+              <div class="skill-pill">MongoDB</div>
+              <div class="skill-pill">MySQL</div>
+              <div class="skill-pill">JWT Security</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h3>Frontend & Web</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-pill">React.js</div>
+              <div class="skill-pill">Responsive Web UI</div>
+              <div class="skill-pill">Async API Integration</div>
+              <div class="skill-pill">Vercel Deployment</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-header">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <h3>AI & Developer Tools</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-pill">Generative AI</div>
+              <div class="skill-pill">Azure AI Services</div>
+              <div class="skill-pill">Git & GitHub</div>
+              <div class="skill-pill">Postman API</div>
+              <div class="skill-pill">VS Code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Academic Excellence -->
+    <section id="about" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Education</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic background & LeetCode profile</p>
+        </div>
+        
+        <div class="about-education-grid">
+          <div class="education-card-full">
+            <div class="card-badge"><i class="fa-solid fa-graduation-cap"></i> Education Timeline</div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-year">Graduated (2022 - 2026)</span>
+                <h4>B.Tech in Computer Science & Engineering</h4>
+                <p class="institution">VIT-AP University</p>
+                <span class="score-tag">CGPA: 8.68 / 10.0</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2020 - 2022</span>
+                <h4>Intermediate (MPC)</h4>
+                <p class="institution">Nucleus Junior College</p>
+                <span class="score-tag">Score: 94.9%</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2020</span>
+                <h4>Secondary School (10th)</h4>
+                <p class="institution">Little Angels School</p>
+                <span class="score-tag">Score: 96.17%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single LeetCode Profile Box -->
+          <div class="leetcode-single-box">
+            <div class="leetcode-header">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <h4>LeetCode Profile</h4>
+                <p>Data Structures & Problem Solving</p>
+              </div>
+            </div>
+            <a href="https://leetcode.com/u/ap_22bce20040/" target="_blank" class="btn-leetcode">
+              <i class="fa-solid fa-up-right-from-square"></i> Visit LeetCode Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Certifications -->
+    <section id="certifications" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Certifications</span>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Oracle & Azure AI certifications</p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="cert-info">
+              <span class="cert-org">Oracle Corporation</span>
+              <h3>Oracle Certified Generative AI Professional</h3>
+              <p>Specialized knowledge in Generative AI architectures, prompt engineering, and LLM application development.</p>
+              <a href="https://drive.google.com/file/d/1MQHQiI6ArJYCcKiIZHTXO7Kn_yS9S6vL/view?usp=sharing" target="_blank" class="cert-link">
+                View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-brands fa-microsoft"></i></div>
+            <div class="cert-info">
+              <span class="cert-org">Microsoft</span>
+              <h3>Microsoft Certified: Azure AI Fundamentals (AI-900)</h3>
+              <p>Validation of foundational AI/ML concepts and implementation of cloud AI workloads on Microsoft Azure.</p>
+              <a href="https://drive.google.com/file/d/1xKqzHq04mQT5KNU4pSi39wFXyphfUOz2/view?usp=drive_link" target="_blank" class="cert-link">
+                View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Contact & Socials -->
+    <section id="contact" class="screen-fit">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Contact</span>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Get in touch for opportunities & referrals</p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-info-grid">
+            <a href="mailto:mannemyuvaraju9503@gmail.com" class="contact-card">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3>Email Me</h3>
+              <p>Direct email response</p>
+              <span class="contact-link">mannemyuvaraju9503@gmail.com</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mannem-yuvaraju/" target="_blank" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <h3>LinkedIn Profile</h3>
+              <p>Connect for software roles</p>
+              <span class="contact-link">linkedin.com/in/mannem-yuvaraju</span>
+            </a>
+
+            <a href="https://github.com/YuvarajuMannem" target="_blank" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <h3>GitHub Repositories</h3>
+              <p>Explore my project codes</p>
+              <span class="contact-link">github.com/YuvarajuMannem</span>
+            </a>
+
+            <a href="https://www.instagram.com/myfriendyuvi/" target="_blank" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <h3>Instagram</h3>
+              <p>Follow and connect</p>
+              <span class="contact-link">instagram.com/myfriendyuvi</span>
+            </a>
+          </div>
+
+          <!-- Direct Quick Message Form Container -->
+          <div class="direct-message-card">
+            <div class="direct-message-header">
+              <div class="direct-msg-icon"><i class="fa-solid fa-paper-plane"></i></div>
+              <div>
+                <h3>Send Me a Direct Message</h3>
+                <p>Type your message below to send directly to my inbox.</p>
+              </div>
+            </div>
+
+            <form id="direct-msg-form" onsubmit="handleDirectMessageSubmit(event)">
+              <div class="form-row">
+                <input type="text" id="msg-name" placeholder="Your Name or Company (Optional)" />
+                <input type="text" id="msg-contact" placeholder="Email / Phone / LinkedIn (Optional)" />
+              </div>
+              <div class="form-group">
+                <textarea id="msg-text" rows="4" placeholder="Write your message or referral opportunity here..." required></textarea>
+              </div>
+              <button type="submit" class="btn-send-msg">
+                <i class="fa-solid fa-paper-plane"></i> Send Direct Message
+              </button>
+              <div id="form-status-msg" class="form-status-badge" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-logo">Yuvaraju Mannem<span class="logo-dot">.</span></div>
+        <p class="footer-tagline">Let's get in touch & grow together.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/mannem-yuvaraju/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/YuvarajuMannem" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/myfriendyuvi/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:mannemyuvaraju9503@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
